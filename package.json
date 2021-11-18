@@ -1,0 +1,19 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "watch:scss": "sass --watch styles.scss -o styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howun/Tic-Tac-Toe.git"
+  },
+  "author": "Howun Lam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/howun/Tic-Tac-Toe/issues"
+  },
+  "homepage": "https://github.com/howun/Tic-Tac-Toe#readme"
+}

@@ -1,0 +1,52 @@
+.gamearea {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 100%;
+  position: relative;
+  
+
+  &__inner {
+    border: 1px solid white;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    height: 400px;
+    width: 400px;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(3, 33.3%);
+    margin-bottom: 20px;
+  }
+
+  div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: blanchedalmond;
+    border:1px dotted whitesmoke;
+  }
+
+  .reset-btn {
+    color: blue;
+  }
+}
+
+
+.scoreTitle {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.scores-reset-btn {
+  height: 50px;
+  width: 100px;
+  align-self: center;
+}

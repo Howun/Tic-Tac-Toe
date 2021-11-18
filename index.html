@@ -1,16 +1,47 @@
+</html>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Howun's Tic Tac Toe!</title>
-</head>
-<body>
-  <h1 class="title">Welcome to a good old fashioned Tic-Tac-Toe!</h1>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Howun's Tic Tac Toe!</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <h1 class="title">Welcome to a good old fashioned Tic-Tac-Toe!</h1>
 
-  <section class="gamearea">
-    <section class="gamearea__inner"></section>
-  </section>
-</body>
+      <p>Player 1 = X</p>
+      <p>Player 2 = O</p>
+      <p class="playerTurn"></p>
+      
+      <section class="gamearea">
+        <section class="gamearea__inner">
+          <div class="tile1 tiles"></div>
+          <div class="tile2 tiles"></div>
+          <div class="tile3 tiles"></div>
+          <div class="tile4 tiles"></div>
+          <div class="tile5 tiles"></div>
+          <div class="tile6 tiles"></div>
+          <div class="tile7 tiles"></div>
+          <div class="tile8 tiles"></div>
+          <div class="tile9 tiles"></div>
+
+        </section>
+        <button class="gamearea_reset gameStartReset-btn">Start/Restart</button>
+      </section>
+    
+      <h2 class="scores scoreTitle">Scores:</h2>
+      <section class="scores__tally">score-tally</section>
+      <button class="scores-reset-btn">Score Reset</button>
+    </body>
+    <script src="./script.js"></script>
+    <!-- // Styling
+    
+    //Title, skewed, shadow.
+    //X and O's shadow and shadow
+    //X and O's displayed using animation -->
+
 </html>
