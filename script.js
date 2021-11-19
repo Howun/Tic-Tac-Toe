@@ -24,8 +24,9 @@ const playerTurnTxt = () => `It's ${currentPlayer}'s turn`;
 playerTurn.innerHTML = playerTurnTxt();
 
 //win combos
+
 function winningSolutions() {
-	var tile1 = document.querySelector(".tile1"),
+	const tile1 = document.querySelector(".tile1"),
 		tile2 = document.querySelector(".tile2"),
 		tile3 = document.querySelector(".tile3"),
 		tile4 = document.querySelector(".tile4"),
@@ -35,10 +36,10 @@ function winningSolutions() {
 		tile8 = document.querySelector(".tile8"),
 		tile9 = document.querySelector(".tile9");
 	if (tile1.innerHTML !== "" && tile1.innerHTML === tile2.innerHTML && tile1.innerHTML === tile3.innerHTML)
-		console.log("win");
+		alert("win");
 	else if (tile4.innerHTML !== "" && tile4.innerHTML === tile5.innerHTML && tile4.innerHTML === tile6.innerHTML)
 		console.log("win");
-	else if (tile7.innerHTML !== "" && tile1.innerHTML === tile2.innerHTML && tile1.innerHTML === tile3.innerHTML)
+	else if (tile7.innerHTML !== "" && tile7.innerHTML === tile8.innerHTML && tile7.innerHTML === tile9.innerHTML)
 		console.log("win");
 	else if (tile1.innerHTML !== "" && tile1.innerHTML === tile4.innerHTML && tile1.innerHTML === tile7.innerHTML)
 		console.log("win");
@@ -53,9 +54,6 @@ function winningSolutions() {
 };
 
 
-
-
-
 for (let i = 0; i < allTiles.length; i++) {
 	const tile = allTiles[i];
 	tile.addEventListener("click", () => {
@@ -64,10 +62,12 @@ for (let i = 0; i < allTiles.length; i++) {
 			case "X":
 				tile.innerHTML = currentPlayer;
 				currentPlayer = "O";
+				winningSolutions();
 				break;
 			case "O":
 				tile.innerHTML = currentPlayer;
 				currentPlayer = "X";
+				winningSolutions();
 				break;
 			case tile.innerHTML = "X" || "O":
 				break;
@@ -75,7 +75,10 @@ for (let i = 0; i < allTiles.length; i++) {
 	})
 };
 
-// gameStartReset.addEventListener("click", () => {
-// 	currentPlayer = "X";
-// 	allTiles.innerHTML = "";
-// })
+gameStartReset.addEventListener("click", () => {
+	currentPlayer = "X";
+	for (let i = 0; i < allTiles.length; i++) {
+		const tile = allTiles[i];
+		tile.innerHTML = "";
+	}
+});
