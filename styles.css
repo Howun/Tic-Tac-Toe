@@ -45,8 +45,7 @@ body > p {
 }
 
 .gamearea {
-  margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +75,7 @@ body > p {
   border: 2px solid whitesmoke;
 }
 .gamearea .gameStartReset-btn {
-  margin: 15px;
+  margin: 10px;
   color: #181818;
   height: 40px;
   width: 100px;
