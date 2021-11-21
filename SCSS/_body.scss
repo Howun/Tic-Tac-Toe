@@ -7,10 +7,10 @@
 body {
   margin-top: 10px;
   display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   // background-color: rgb(43, 43, 43);
   height: 100vh;
   width: 100vw;
@@ -28,7 +28,7 @@ body {
   font-size: 50px;
 }
 
-body > p {
+body>p {
 
   display: flex;
   justify-content: center;
@@ -45,4 +45,3 @@ body > p {
   font-size: 60px;
   color: aqua;
 }
-
