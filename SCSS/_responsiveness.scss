@@ -1,0 +1,15 @@
+@media only screen and (max-width: 800px){
+  title {
+    font-size: 30px;
+  }
+  body > p {
+    font-size: 15px;
+  }
+  .playerTurn {
+    font-size: 25px;
+  }
+  .winMessage {
+    height: 30px;
+    font-size: 40px;
+  }
+}
