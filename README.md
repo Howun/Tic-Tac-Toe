@@ -1,3 +1,3 @@
 # Tic-Tac-Toe
 
-<h2>made on HTML, CSS and JavaScript</h2>
+<h2>A game made on HTML, CSS and JavaScript</h2>
