@@ -16,15 +16,21 @@ let allTiles = document.querySelectorAll(".tiles");
 const gameContent = document.querySelector(".gamearea__inner");
 const gameStartReset = document.querySelector(".gameStartReset-btn");
 let playerTurn = document.querySelector(".playerTurn");
+let winningMessage = document.querySelector(".winMessage");
 
 let currentPlayer = "X";
-const winTxt = () =>  `Player ${currentPlayer} wins!`;
+let previousPlayer = "";
+const winTxt = () =>  `Player ${previousPlayer} wins!`;
 const drawTxt = () =>  `It's a draw!`;
 const playerTurnTxt = () => `It's ${currentPlayer}'s turn`;
+
 playerTurn.innerHTML = playerTurnTxt();
 
-//win combos
+function winningTxtUpdate() {winningMessage.innerHTML = winTxt()};
+function drawTxtUpdate() {winningMessage.innerHTML = drawTxt()};
 
+
+//win combos
 function winningSolutions() {
 	const tile1 = document.querySelector(".tile1"),
 		tile2 = document.querySelector(".tile2"),
@@ -36,24 +42,34 @@ function winningSolutions() {
 		tile8 = document.querySelector(".tile8"),
 		tile9 = document.querySelector(".tile9");
 	if (tile1.innerHTML !== "" && tile1.innerHTML === tile2.innerHTML && tile1.innerHTML === tile3.innerHTML)
-		alert("win");
+	winningTxtUpdate();
 	else if (tile4.innerHTML !== "" && tile4.innerHTML === tile5.innerHTML && tile4.innerHTML === tile6.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile7.innerHTML !== "" && tile7.innerHTML === tile8.innerHTML && tile7.innerHTML === tile9.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile1.innerHTML !== "" && tile1.innerHTML === tile4.innerHTML && tile1.innerHTML === tile7.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile2.innerHTML !== "" && tile2.innerHTML === tile5.innerHTML && tile2.innerHTML === tile8.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile3.innerHTML !== "" && tile3.innerHTML === tile6.innerHTML && tile3.innerHTML === tile9.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile1.innerHTML !== "" && tile1.innerHTML === tile5.innerHTML && tile1.innerHTML === tile9.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
 	else if (tile3.innerHTML !== "" && tile3.innerHTML === tile5.innerHTML && tile3.innerHTML === tile7.innerHTML)
-		console.log("win");
+	winningTxtUpdate();
+	else if (tile1.innerHTML !== "" &&
+					tile2.innerHTML !== "" &&
+					tile3.innerHTML !== "" &&
+					tile4.innerHTML !== "" &&
+					tile5.innerHTML !== "" &&
+					tile6.innerHTML !== "" &&
+					tile7.innerHTML !== "" &&
+					tile8.innerHTML !== "" &&
+					tile9.innerHTML !== "")
+	drawTxtUpdate();		
 };
 
-
+// This make
 for (let i = 0; i < allTiles.length; i++) {
 	const tile = allTiles[i];
 	tile.addEventListener("click", () => {
@@ -62,23 +78,29 @@ for (let i = 0; i < allTiles.length; i++) {
 			case "X":
 				tile.innerHTML = currentPlayer;
 				currentPlayer = "O";
+				previousPlayer = "X";
+				playerTurn.innerHTML = playerTurnTxt();
 				winningSolutions();
+				console.log(previousPlayer);
 				break;
 			case "O":
 				tile.innerHTML = currentPlayer;
 				currentPlayer = "X";
+				previousPlayer = "O";
+				playerTurn.innerHTML = playerTurnTxt();
 				winningSolutions();
+				console.log(previousPlayer);
 				break;
-			case tile.innerHTML = "X" || "O":
-				break;
-		}
-	})
+		};
+	});
 };
 
+// This restarts the game
 gameStartReset.addEventListener("click", () => {
 	currentPlayer = "X";
 	for (let i = 0; i < allTiles.length; i++) {
 		const tile = allTiles[i];
 		tile.innerHTML = "";
+		winningMessage.innerHTML = "";
 	}
 });
