@@ -36,7 +36,10 @@ body > p {
 .playerTurn {
   margin-top: 40px;
   font-size: 50px;
-  height: 100px;
+}
+
+.winMessage {
+  height: 30px;
 }
 
 .gamearea {
