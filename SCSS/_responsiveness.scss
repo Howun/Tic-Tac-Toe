@@ -1,4 +1,7 @@
 @media only screen and (max-width: 800px) {
+  * {
+    margin: 5px;
+  }
   body {
     min-width: 400px;
   }
@@ -16,7 +19,7 @@
   }
 
   .winMessage {
-    height: 30px;
+    height: 20px;
     font-size: 40px;
   }
 
