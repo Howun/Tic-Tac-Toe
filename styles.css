@@ -82,12 +82,12 @@ body > p {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   body {
     min-width: 400px;
   }
 
-  title {
+  .title {
     font-size: 30px;
   }
 
@@ -101,6 +101,14 @@ body > p {
 
   .winMessage {
     height: 30px;
+    font-size: 40px;
+  }
+
+  .gameArea__inner {
+    height: 200px;
+    width: 200px;
+  }
+  .gameArea div {
     font-size: 40px;
   }
 }
