@@ -52,7 +52,6 @@ for (let i = 0; i < allTiles.length; i++) {
 				winningSolutions();
 				break;
 		};
-		break;
 	});
 };
 
