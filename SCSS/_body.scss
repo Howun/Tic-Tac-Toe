@@ -32,16 +32,17 @@ body > p {
 
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 25px;
   color: azure;
 }
 
 .playerTurn {
-
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .winMessage {
-  height: 30px;
+  height: 50px;
+  font-size: 60px;
+  color: aqua;
 }
 
